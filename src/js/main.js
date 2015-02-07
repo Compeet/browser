@@ -17,7 +17,9 @@
 (function() {
     var module = angular.module("compeet.Main",
             [
-                "ngRoute"
+                "ngRoute",
+                "compeet.home.Home",
+                "compeet.registration.Registration"
             ]);
 
     module.config(["$routeProvider", router]);
@@ -33,6 +35,11 @@
                 "/home", {
                 templateUrl: PARTIALS + "home/home.html",
                 controller: "compeet.home.Home.Controller"
+            }).
+            when(
+                "/registration", {
+                templateUrl: PARTIALS + "registration/registration.html",
+                controller: "compeet.registration.Registration.Controller"
             }).
             otherwise({
                 redirectTo: "/home"

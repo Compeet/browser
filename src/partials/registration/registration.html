@@ -16,3 +16,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
+<form ng-submit="register()">
+    Full name: <input type="text" ng-model="registrant.fullName"><br>
+    Nick: <input required type="text" ng-model="registrant.nick"><br>
+    E-mail: <input required type="text" ng-model="registrant.email"><br>
+    Password <input required type="password" ng-model="registrant.password">
+
+    <br><br>
+    <input type="submit" value="Register">
+</form>
